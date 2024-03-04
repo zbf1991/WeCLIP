@@ -1,2 +1,2 @@
 # WeCLIP
-CVPR2024
+CVPR-2024, Code will be released after the conference.
