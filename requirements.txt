@@ -1,0 +1,17 @@
+imageio==2.22.4
+joblib==1.2.0
+lxml==4.9.2
+matplotlib==3.6.2
+mmcv==2.0.0
+mmsegmentation==1.0.0
+numpy==1.23.5
+omegaconf==2.0.6
+opencv_python==4.6.0.66
+Pillow==9.3.0
+pydensecrf==1.0rc2
+regex==2023.3.23
+scikit_learn==1.2.0
+setuptools==58.0.4
+timm==0.6.12
+tqdm==4.62.3
+ttach==0.0.3
