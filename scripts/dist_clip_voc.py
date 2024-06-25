@@ -25,7 +25,7 @@ from WeCLIP_model.model_attn_aff_voc import WeCLIP
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--config",
-                    default='/data1/zbf_data/Project2023_zbf/FCLIP_siyue/configs/voc_attn_reg.yaml',
+                    default='/your/path/WeCLIP/configs/voc_attn_reg.yaml',
                     type=str,
                     help="config")
 parser.add_argument("--seg_detach", action="store_true", help="detach seg")

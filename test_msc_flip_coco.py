@@ -25,8 +25,7 @@ parser.add_argument("--work_dir", default="results", type=str, help="work_dir")
 parser.add_argument("--bkg_score", default=0.45, type=float, help="bkg_score")
 parser.add_argument("--resize_long", default=512, type=int, help="resize the long side")
 parser.add_argument("--eval_set", default="val", type=str, help="eval_set") #val
-parser.add_argument("--model_path", default="/data1/zbf_data/Project2023_zbf/FCLIP_siyue/scripts/work_dir_coco/"
-                                            "checkpoints/2024-06-24-11-14/WeCLIP_model_iter_80000.pth",
+parser.add_argument("--model_path", default="/your/path/WeCLIP/WeCLIP_model_iter_80000.pth",
                     type=str, help="model_path")
 
 
@@ -109,15 +108,15 @@ def validate(model, dataset, test_scales=None):
             _cams_hist, cam_score = evaluate.scores(_gts, cams, _cams_hist, 81)
 
             _preds, _gts, _msc_preds, cams = [], [], [], []
-            print("cams score:")
-            print(cam_score)
+            # print("cams score:")
+            # print(cam_score)
             print("segs score:")
             print(seg_score)
             print("msc segs score:")
             print(msc_seg_score)
 
 
-        np.save(args.work_dir+ '/logit/' + name[0] + '.npy', {"segs":segs.detach().cpu().numpy(), "msc_segs":msc_segs.detach().cpu().numpy()})
+        # np.save(args.work_dir+ '/logit/' + name[0] + '.npy', {"segs":segs.detach().cpu().numpy(), "msc_segs":msc_segs.detach().cpu().numpy()})
             
     return _gts, _preds, _msc_preds, cams, _preds_hist, _msc_preds_hist, _cams_hist
 

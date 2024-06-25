@@ -1,6 +1,6 @@
 dataset:
-  root_dir: /data1/zbf_data/dataset/VOCdevkit/VOC2012
-  name_list_dir: /data1/zbf_data/Project2023_zbf/FCLIP_siyue/datasets/voc
+  root_dir: /your/path/VOCdevkit/VOC2012
+  name_list_dir: /your/path/WeCLIP/datasets/voc
   num_classes: 21
   crop_size: 320
   resize_range: [512, 2048]
@@ -38,6 +38,6 @@ scheduler:
   power: 1.0
 
 clip_init:
-  clip_pretrain_path: /data1/zbf_data/Project2023_zbf/FCLIP_siyue/pretrained/ViT-B-16.pt
+  clip_pretrain_path: /your/path/WeCLIP/pretrained/ViT-B-16.pt
   embedding_dim: 256
   in_channels: [768, 768,768,768]

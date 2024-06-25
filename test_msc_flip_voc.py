@@ -25,8 +25,7 @@ parser.add_argument("--work_dir", default="results", type=str, help="work_dir")
 parser.add_argument("--bkg_score", default=0.45, type=float, help="bkg_score")
 parser.add_argument("--resize_long", default=512, type=int, help="resize the long side")
 parser.add_argument("--eval_set", default="val", type=str, help="eval_set") #val
-parser.add_argument("--model_path", default="/data1/zbf_data/Project2023_zbf/FCLIP_siyue/scripts/work_dir_voc/"
-                                            "checkpoints/2024-06-17-14-28/WeCLIP_model_iter_30000.pth", type=str, help="model_path")
+parser.add_argument("--model_path", default="/your/path/WeCLIP/WeCLIP_model_iter_30000.pth", type=str, help="model_path")
 
 
 
