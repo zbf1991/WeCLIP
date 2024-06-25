@@ -91,7 +91,7 @@ python scripts/dist_clip_voc.py --config your/path/WeCLIP/configs/voc_attn_reg.y
 python scripts/dist_clip_coco.py --config your/path/WeCLIP/configs/coco_attn_reg.yaml
 ```
 
-###Inference
+### Inference
 To inference, first modify the inference model path `--model_path` in `test_msc_flip_voc` or `test_msc_flip_voc`
 
 Then, run the following code:
