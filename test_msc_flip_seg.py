@@ -4,7 +4,7 @@ import sys
 sys.path.append(".")
 from utils.dcrf import DenseCRF
 from utils.imutils import encode_cmap
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import numpy as np
 import torch
 import torch.nn.functional as F
