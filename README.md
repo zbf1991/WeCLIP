@@ -80,7 +80,7 @@ Three parameters requires to be modified based on your path:
 
 For VOC, Modify them in `configs/voc_attn_reg.yaml`.
 
-For VOC, Modify them in `configs/coco_attn_reg.yaml`. 
+For COCO, Modify them in `configs/coco_attn_reg.yaml`. 
 
 ### Train
 To start training, just run the following code.
