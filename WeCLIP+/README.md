@@ -109,12 +109,16 @@ python test_msc_flip_coco.py --model_path your/inference/model/path/WeCLIP_model
 Please kindly cite our paper if you find it's helpful in your work.
 
 ``` bibtex
-@InProceedings{Zhang_2024_CVPR,
-    author    = {Zhang, Bingfeng and Yu, Siyue and Wei, Yunchao and Zhao, Yao and Xiao, Jimin},
-    title     = {Frozen CLIP-DINO: A Strong Backbone for Weakly Supervised Semantic Segmentation},
-    booktitle = {TPAMI},
-    year      = {2025},
-}
+@ARTICLE{10891864,
+  author={Zhang, Bingfeng and Yu, Siyue and Xiao, Jimin and Wei, Yunchao and Zhao, Yao},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Frozen CLIP-DINO: a Strong Backbone for Weakly Supervised Semantic Segmentation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-17},
+  keywords={Training;Semantics;Decoding;Semantic segmentation;Feature extraction;Dogs;Transformers;Costs;Pipelines;Hands;Weakly supervised;semantic segmentation;CLIP;DINO},
+  doi={10.1109/TPAMI.2025.3543191}}
 ```
 
 ## Ackonwledge
