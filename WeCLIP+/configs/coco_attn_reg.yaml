@@ -1,0 +1,81 @@
+dataset:
+  root_dir: /your/path/coco2014
+  name_list_dir: /your/path/WeCLIP+/datasets/coco
+  num_classes: 81
+  crop_size: 320
+  resize_range: [512, 2048]
+  rescale_range: [0.5, 2.0]
+  ignore_index: 255
+
+work_dir:
+  dir: work_dir_coco
+  ckpt_dir: checkpoints
+  pred_dir: predictions
+  segs_dir: segs
+  tb_logger_dir: tb_logger
+
+train:
+  split: train
+  samples_per_gpu: 8 #8
+  max_iters: 80000
+  cam_iters: 5000
+  eval_iters: 10000
+  log_iters: 200
+
+val:
+  split: val
+
+optimizer:
+  type: AdamW
+  learning_rate: 2e-5
+  betas: [0.9, 0.999]
+  weight_decay: 0.01
+
+scheduler:
+  warmup_iter: 50
+  warmup_ratio: 1e-6
+  power: 1.0
+
+clip_init:
+  clip_pretrain_path: /your/path/WeCLIP+/pretrained/ViT-B-16.pt
+  embedding_dim: 256
+  in_channels: [768, 768,768,768]
+  clip_flag: 16 # if VIT-B-16, set as 16
+  resize_long: 512
+
+# ----------------------------------
+dino_init:
+  dino_model: 'dinov2_vits14'
+  dino_fts_fuse_dim: 384
+  decoder_layer: 3
+
+#dino_init:
+#  dino_model: 'dinov2_vits14_reg'
+#  dino_fts_fuse_dim: 384
+#  decoder_layer: 3
+
+
+#dino_init:
+#  dino_model: 'dinov2_vitb14'
+#  dino_fts_fuse_dim: 768
+#  decoder_layer: 3
+
+
+#dino_init:
+#  dino_model: 'dinov2_vitb14_reg'
+#  dino_fts_fuse_dim: 768
+#  decoder_layer: 3
+
+
+#dino_init:
+#  dino_model: 'dinov2_vitl14'
+#  dino_fts_fuse_dim: 1024
+#  decoder_layer: 5
+
+
+#dino_init:
+#  dino_model: 'dinov2_vitl14_reg'
+#  dino_fts_fuse_dim: 1024
+#  decoder_layer: 5
+
+
