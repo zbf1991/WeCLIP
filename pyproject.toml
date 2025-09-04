@@ -1,0 +1,95 @@
+[tool.poetry]
+name = "weclip-plus"
+version = "0.1.0"
+description = "WeCLIP+ - Enhanced weakly-supervised semantic segmentation with CLIP"
+authors = ["WeCLIP+ Team"]
+readme = "README.md"
+packages = [{include = "WeCLIP_Plus", from = "WeCLIP+"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+# Core dependencies with compatible versions
+numpy = "^1.21.0"
+matplotlib = "^3.5.0"
+tqdm = "^4.60.0"
+omegaconf = "^2.1.0"
+timm = "^0.6.0"
+imageio = "^2.15.0"
+Pillow = "^9.0.0"
+scikit-learn = "^1.1.0"
+# MMCV dependencies - using pip installable versions
+mmcv = "^1.6.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.1"
+
+[tool.poetry.scripts]
+test = "pytest:main"
+tests = "pytest:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+    "--cov=WeCLIP_Plus",
+    "--cov-branch",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=80"
+]
+markers = [
+    "unit: marks tests as unit tests (deselect with '-m \"not unit\"')",
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["WeCLIP+/WeCLIP_Plus"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/.venv/*",
+    "*/build/*",
+    "*/dist/*",
+    "*/.tox/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"
